@@ -1,0 +1,16 @@
+# Kedi and Python — Türkçe 🐈
+```
+import math
+
+def greeting(name: str) -> str:
+    return f"Merhaba {name.upper()} 🐈"
+
+answer = math.sqrt(42)
+```
+
+@main(value: `list[int]` = `[1, 2, 3]`):
+    > instructions:
+        Explain the result briefly.
+    [total] = `sum(value)`
+    >> Result: <total>
+    = `greeting("Dünya")`

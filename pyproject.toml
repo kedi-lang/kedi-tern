@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kedi-tern"
+version = "0.2.0"
+description = "Tree-sitter syntax highlighting for Kedi files in Tern"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["tree-sitter-kedi==0.4.1", "tree-sitter-python==0.25.0", "tree-sitter==0.25.2"]
+
+[project.scripts]
+kedi-tern-highlight = "kedi_tern.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.3,<9", "ruff>=0.11,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kedi_tern"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/python", "/tests", "/examples", "/scripts", "/plugin.toml", "/host.luau", "/window.luau", "/pyproject.toml", "/uv.lock", "/README.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+extend-exclude = [".qa", "target"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

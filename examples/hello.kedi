@@ -1,0 +1,10 @@
+# Kedi in Tern — Türkçe karakterler ve 🐈 emoji.
+
+@greet(name: str) -> str:
+    >> Merhaba <name>! 🐈
+    = <output>
+
+@main():
+    > artifacts:
+        query_artifacts: auto
+    >> Merhaba Dünya!

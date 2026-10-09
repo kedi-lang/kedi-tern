@@ -1,0 +1,11 @@
+schema = 1
+id = "kedi"
+name = "Kedi"
+version = "0.2.0"
+host = "host.luau"
+window = "window.luau"
+
+[[blocks]]
+id = "viewer"
+title = "Kedi"
+files = ["*.kedi"]
